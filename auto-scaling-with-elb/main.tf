@@ -29,7 +29,7 @@ resource "aws_launch_configuration" "tf-launchconfig" {
 
   user_data = <<-EOF
               #!/bin/bash
-              echo "Hello, World! This is a loal balkanced webserver deployed by Terraform. (please check https://github.com/gondaljutt/learn-terraform for more usefull info)" > index.html
+              echo "Hello, World! This is a loal balanced webserver deployed by Terraform. (please check https://github.com/gondaljutt/learn-terraform for more usefull info)" > index.html
               nohup busybox httpd -f -p "${var.server_port}" &
               EOF
   root_block_device {
